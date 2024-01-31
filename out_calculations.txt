@@ -1,0 +1,6 @@
+Azimuth: 186
+AzimuthVectorInitialize: -0.773891
+AzimuthVectorStep 0.008321
+Elevation: 53
+ElevationVectorInitialize: -0.912945
+ElevationVectorStep 0.034451
