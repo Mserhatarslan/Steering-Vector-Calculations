@@ -19,7 +19,7 @@
  * @param a_print: A pointer to the AzimuthCalc structure.
  */
 
-void printArrayAzimuthVector(AzimuthCalc *a_print)
+void printArrayAzimuthVector(const AzimuthCalc *a_print)
 {
     for (int i = 0; i < a_print->numberOfSteerVectorAzimuthDirection; ++i) {
         printf("AzimuthVectorValues[%d] = %f\n ", i, a_print->AzimuthVectorValues[i]);
@@ -32,7 +32,7 @@ void printArrayAzimuthVector(AzimuthCalc *a_print)
  * @param e_print: A pointer to the ElevationCalc structure.
  */
 
-void printArrayElevationVector(ElevationCalc *e_print)
+void printArrayElevationVector(const ElevationCalc *e_print)
 {
     for (int i = 0; i < e_print->numberOfSteerVectorElevationDirection; ++i) {
         printf("ElevationVectorValues[%d] = %f\n ", i, e_print->ElevationVectorValues[i]);
@@ -110,7 +110,9 @@ void ElevationMathOperations(ElevationCalc *e, int ElevationFov, double Elevatio
  */
 int main(void) {
 
-    FILE *az_pd, *el_pd, *out_calculations;
+    FILE *az_pd;
+    Fıle *el_pd;
+    FILE *out_calculations;
 
     az_pd = fopen("azimuthVal.txt", "w");  // Opening the azimuthVal.txt file in write mode.
     if (az_pd == NULL) {
