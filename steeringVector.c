@@ -59,7 +59,7 @@ void AzimuthMathOperations(AzimuthCalc *a, int AzimuthFov, double AzimuthStepSiz
 
     int i = 0; 
 
-    for (int i = 0; i < a->numberOfSteerVectorAzimuthDirection; ++i) {
+    for (i = 0; i < a->numberOfSteerVectorAzimuthDirection; ++i) {
 
         a->AzimuthVectorValues[i] = a->AzimuthVectorInitialize + i * a->AzimuthVectorStep;
          fprintf(az_pd, "AzimuthVectorValues[%d] = %f\n", i, a->AzimuthVectorValues[i]);
